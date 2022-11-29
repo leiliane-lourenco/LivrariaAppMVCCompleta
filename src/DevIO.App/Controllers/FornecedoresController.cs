@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace DevIO.App.Controllers
 {
@@ -52,7 +53,8 @@ namespace DevIO.App.Controllers
         [HttpPost]
         [Route("novo-fornecedor")]
         public async Task<ActionResult> Create(FornecedorViewModel fornecedorViewModel)
-        {
+        {            
+
             if (!ModelState.IsValid)
                 return View(fornecedorViewModel);
 

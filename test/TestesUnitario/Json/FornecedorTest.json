@@ -1,0 +1,19 @@
+{
+  "Id": "aea3a8d8-d594-49f9-920e-8f91798de5d9",
+  "Nome": "Livraria Soul",
+  "Documento": "25756425000156",
+  "TipoFornecedor": 2,
+  "Endereco": {
+    "Id": "faef40d2-c7b0-4564-940f-3712f7c11345",
+    "Logradouro": "Avenida Professor João Batista Conti",
+    "Numero": "97",
+    "Complemento": null,
+    "Bairro": "Conjunto Residencial José Bonifácio",
+    "Cep": "08255210",
+    "Cidade": "São Paulo",
+    "Estado": "SP",
+    "FornecedorId": "aea3a8d8-d594-49f9-920e-8f91798de5d9"
+  },
+  "Ativo": true,
+  "Produtos": null
+}

@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DevIO.Data.Migrations
 {
     [DbContext(typeof(MeuDbContext))]
-    [Migration("20221004201442_Initial")]
+    [Migration("20221017210844_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -40,8 +40,7 @@ namespace DevIO.Data.Migrations
                         .HasColumnType("varchar(100)");
 
                     b.Property<string>("Complemento")
-                        .IsRequired()
-                        .HasColumnType("varchar(200)");
+                        .HasColumnType("varchar(50)");
 
                     b.Property<string>("Estado")
                         .IsRequired()

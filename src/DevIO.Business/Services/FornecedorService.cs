@@ -25,7 +25,8 @@ namespace DevIO.Business.Services
             if (!ExecutarValidacao(new FornecedorValidation(), fornecedor)
                 || !ExecutarValidacao(new EnderecoValidation(), fornecedor.Endereco)) return;
 
-            if (_fornecedorRepository.Buscar(f => f.Documento == fornecedor.Documento).Result.Any())
+            var fornecedores = await _fornecedorRepository.Buscar(f => f.Documento == fornecedor.Documento);
+            if (fornecedores.Any())
             {
                 Notificar("Já existe um fornecedor com este documento infomado.");
                 return;
@@ -70,5 +71,9 @@ namespace DevIO.Business.Services
             _enderecoRepository?.Dispose();
         }
 
+        public object AtualizarEndereco(Fornecedor enderecoFornecedor)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
